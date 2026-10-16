@@ -10176,5 +10176,46 @@ html.csp-lock body{overflow:hidden !important}
 
 }
 </style>
+
+<!-- ConversionSystem™ responsive centring fix -->
+<style id="cs-responsive-centering-fix">
+  /* Keep the page at the viewport width and prevent full-bleed sections
+     from expanding the document horizontally. Existing inner layouts,
+     typography, colors, animations, and section content remain unchanged. */
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  html {
+    overflow-x: clip;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: clip;
+  }
+
+  #csHero,
+  #csWhat,
+  #csRealProblemRef,
+  #csScaleClean,
+  #csProof,
+  #csBook,
+  #csInside,
+  #csFounderFinal2026,
+  #csFit,
+  #csGapVisual,
+  #csOfferRef,
+  #csFaq {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+</style>
+
 </body>
 </html>
