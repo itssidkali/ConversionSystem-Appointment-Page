@@ -1,0 +1,1892 @@
+<!-- ============================================================
+     ConversionSystem™ — HERO
+     Premium Landing Page Version
+     GHL Custom HTML Block
+     ============================================================ -->
+
+<section id="csHero">
+
+  <!-- subtle editorial graphic -->
+  <div class="cs-visual-field" aria-hidden="true">
+
+    <div class="cs-orbit cs-orbit-1"></div>
+    <div class="cs-orbit cs-orbit-2"></div>
+
+    <span class="cs-orbit-point"></span>
+
+
+  </div>
+
+
+  <div class="cs-wrap">
+
+
+    <!-- ======================================================
+         BRAND
+         ====================================================== -->
+
+    <div class="cs-brand">
+
+      <span class="cs-brand-name">
+        ConversionSystem™
+      </span>
+
+    </div>
+
+
+
+    <!-- ======================================================
+         POSITIONING
+         ====================================================== -->
+
+    <div class="cs-positioning">
+
+      <p>
+        THE SALES-FIRST ONLINE BUSINESS BUILDER FOR
+        <strong>JEWELLERY BRANDS</strong>
+      </p>
+
+    </div>
+
+
+
+    <!-- ======================================================
+         HERO HEADLINE
+         ====================================================== -->
+
+    <h1 class="cs-h1">
+
+      <span class="cs-headline-small">
+        Stop Losing
+      </span>
+
+      <span class="cs-headline-main">
+        Jewellery Customers
+      </span>
+
+      <span class="cs-headline-last">
+
+        <span class="cs-were">
+          Who Were
+        </span>
+
+        <em class="cs-ready">
+          READY TO BUY
+        </em>
+
+      </span>
+
+    </h1>
+
+
+
+    <!-- ======================================================
+         PROMISE
+         ====================================================== -->
+
+    <div class="cs-promise">
+
+      <p class="cs-promise-main">
+        Generate
+        <strong>50–60% More Orders</strong>
+      </p>
+
+      <p class="cs-promise-sub">
+        From the traffic you're already paying for
+        <span class="cs-break"></span>
+        <strong>without increasing your ad spend</strong>
+        within <em>15 days</em>
+      </p>
+
+    </div>
+
+
+
+    <!-- ======================================================
+         METHOD
+         ====================================================== -->
+
+    <p class="cs-method">
+      Powered by the
+      <strong>ConversionSystem™ Method</strong>
+    </p>
+
+
+
+    <!-- ======================================================
+         CTA
+         ====================================================== -->
+
+    <div class="cs-actions">
+
+      <a
+        class="cs-btn"
+        href="https://api.leadconnectorhq.com/widget/form/349k6XqxJsWlr88axN4V"
+      >
+
+        <span>
+          Book Your Strategy Session
+        </span>
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
+
+          <path
+            d="M5 12h13M13 6l6 6-6 6"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+
+        </svg>
+
+      </a>
+
+    </div>
+
+
+
+    <!-- ======================================================
+         TRUST
+         ====================================================== -->
+
+    <div class="cs-trust">
+
+      <div class="cs-avatars">
+
+        <span
+          style="background-image:url('https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=120')"
+        ></span>
+
+        <span
+          style="background-image:url('https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=120')"
+        ></span>
+
+        <span
+          style="background-image:url('https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=120')"
+        ></span>
+
+        <span
+          style="background-image:url('https://images.pexels.com/photos/1587009/pexels-photo-1587009.jpeg?auto=compress&cs=tinysrgb&w=120')"
+        ></span>
+
+        <span
+          style="background-image:url('https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=120')"
+        ></span>
+
+      </div>
+
+
+      <p class="cs-trust-line">
+
+        Trusted by
+        <strong>150+ Jewellery Brands</strong>
+        across India
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<script>
+(function () {
+
+  var hero = document.getElementById("csHero");
+
+  if (!hero) return;
+
+
+  var activated = false;
+
+  function activate() {
+
+    if (activated) return;
+    activated = true;
+    hero.classList.add("is-in");
+
+  }
+
+  function activateWhenReady() {
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () {
+        requestAnimationFrame(function () {
+          requestAnimationFrame(activate);
+        });
+      });
+    } else {
+      requestAnimationFrame(activate);
+    }
+  }
+
+
+  if ("IntersectionObserver" in window) {
+
+    var observer = new IntersectionObserver(
+
+      function (entries) {
+
+        entries.forEach(function (entry) {
+
+          if (entry.isIntersecting) {
+
+            activateWhenReady();
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold: 0.18
+      }
+
+    );
+
+    observer.observe(hero);
+
+  } else {
+
+    activateWhenReady();
+
+  }
+
+
+  activateWhenReady();
+
+})();
+
+/* ---- CONVERSIONSYSTEM TRUE JS LOOP CTA™ ---- */
+(function () {
+  var hero = document.getElementById("csHero");
+  if (!hero) return;
+
+  var cta = hero.querySelector(".cs-btn");
+  if (!cta) return;
+
+  var ctaLoopTimer = null;
+
+  function startCTAAnimation() {
+    if (document.hidden || !hero.classList.contains("is-in")) return;
+
+    cta.classList.remove("true-loop");
+    void cta.offsetWidth;
+    cta.classList.add("true-loop");
+  }
+
+  function stopCTAAnimation() {
+    cta.classList.remove("true-loop");
+  }
+
+  ctaLoopTimer = setInterval(function () {
+    if (!document.hidden && hero.classList.contains("is-in")) {
+      startCTAAnimation();
+    }
+  }, 1080);
+
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+      stopCTAAnimation();
+    } else {
+      startCTAAnimation();
+    }
+  });
+})();
+</script>
+
+
+
+<style>
+
+@import url(
+  'https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap'
+);
+
+
+
+/* ============================================================
+   ROOT
+   ============================================================ */
+
+#csHero {
+
+  visibility: hidden;
+
+  --black: #0A0A0C;
+
+  --white: #F6F3EF;
+
+  --white-soft: rgba(246,243,239,.72);
+
+  --white-dim: rgba(246,243,239,.42);
+
+  --red: #B3160F;
+
+  --red-light: #C52A20;
+
+  --gold: #C9960A;
+
+
+  --ease: cubic-bezier(.16,1,.3,1);
+
+
+  width: 100vw;
+
+  max-width: 100vw;
+
+  margin-left: calc(50% - 50vw);
+
+  margin-right: calc(50% - 50vw);
+
+
+  min-height:
+    clamp(540px, 78svh, 720px);
+
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+
+  background:
+    var(--black);
+
+
+  color: var(--white);
+
+
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    sans-serif;
+
+
+  padding:
+    clamp(42px, 5vw, 62px)
+    clamp(20px, 5vw, 64px);
+
+
+  text-align: center;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+}
+
+
+
+#csHero *,
+#csHero *::before,
+#csHero *::after {
+
+  box-sizing: border-box;
+
+}
+
+
+
+/* ============================================================
+   WRAPPER
+   ============================================================ */
+
+#csHero .cs-wrap {
+
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+
+  max-width: 1030px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+}
+
+
+
+/* ============================================================
+   BACKGROUND GRAPHIC
+   ============================================================ */
+
+#csHero .cs-visual-field {
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 1;
+
+}
+
+
+
+/* red editorial orbit */
+
+#csHero .cs-orbit {
+
+  position: absolute;
+
+  border:
+    1px solid
+    rgba(179,22,15,.30);
+
+  border-radius: 50%;
+
+  opacity: 0;
+
+  transform:
+    scale(.86)
+    rotate(-18deg);
+
+  transition:
+    opacity 1.4s ease .3s,
+    transform 1.8s var(--ease) .3s;
+
+}
+
+
+#csHero.is-in .cs-orbit {
+
+  opacity: 1;
+
+  transform:
+    scale(1)
+    rotate(0deg);
+
+}
+
+
+#csHero .cs-orbit-1 {
+
+  width:
+    min(680px, 65vw);
+
+  height:
+    min(680px, 65vw);
+
+  right:
+    -24vw;
+
+  top:
+    -22vw;
+
+}
+
+
+#csHero .cs-orbit-2 {
+
+  width:
+    min(430px, 40vw);
+
+  height:
+    min(430px, 40vw);
+
+  right:
+    -12vw;
+
+  top:
+    -8vw;
+
+  border-color:
+    rgba(201,150,10,.18);
+
+}
+
+
+
+/* gold point */
+
+#csHero .cs-orbit-point {
+
+  position: absolute;
+
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background:
+    var(--gold);
+
+  right:
+    16%;
+
+  top:
+    24%;
+
+  opacity: 0;
+
+  transform: scale(.5);
+
+  transition:
+    opacity .6s ease 1s,
+    transform .7s var(--ease) 1s;
+
+}
+
+
+#csHero.is-in .cs-orbit-point {
+
+  opacity: 1;
+
+  transform: scale(1);
+
+}
+
+
+
+/* ============================================================
+   BRAND
+   ============================================================ */
+
+#csHero.is-in {
+  visibility: visible;
+}
+
+#csHero .cs-brand {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom:
+    clamp(20px, 3vh, 28px);
+
+
+  opacity: 0;
+
+  transform:
+    translateY(14px);
+
+  transition:
+    opacity .7s ease .06s,
+    transform .85s var(--ease) .06s;
+
+}
+
+
+#csHero.is-in .cs-brand {
+
+  opacity: 1;
+
+  transform:
+    translateY(0);
+
+}
+
+
+#csHero .cs-brand-mark {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 28px;
+
+  height: 28px;
+
+  border:
+    1px solid
+    var(--red);
+
+  color:
+    var(--red);
+
+  font-family:
+    'Archivo',
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: .02em;
+
+}
+
+
+#csHero .cs-brand-name {
+
+  font-family:
+    'Archivo',
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: .08em;
+
+  color:
+    var(--white);
+
+}
+
+
+
+/* ============================================================
+   POSITIONING
+   ============================================================ */
+
+#csHero .cs-positioning {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-bottom:
+    clamp(16px, 2.5vh, 22px);
+
+
+  opacity: 0;
+
+  transform:
+    translateY(13px);
+
+  transition:
+    opacity .7s ease .14s,
+    transform .85s var(--ease) .14s;
+
+}
+
+
+#csHero.is-in .cs-positioning {
+
+  opacity: 1;
+
+  transform:
+    translateY(0);
+
+}
+
+
+
+#csHero .cs-positioning p {
+
+  margin: 0;
+
+  font-size:
+    clamp(9px, .75vw, 11px);
+
+  font-weight: 600;
+
+  letter-spacing: .19em;
+
+  text-transform: uppercase;
+
+  color:
+    var(--white-dim);
+
+}
+
+
+#csHero .cs-positioning strong {
+
+  color:
+    var(--white);
+
+  font-weight: 600;
+
+}
+
+
+
+/* ============================================================
+   HEADLINE
+   ============================================================ */
+
+#csHero .cs-h1 {
+
+  margin: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  width: 100%;
+
+  line-height: .9;
+
+  letter-spacing: -.045em;
+
+  font-family:
+    'Archivo',
+    sans-serif;
+
+  font-weight: 500;
+
+}
+
+
+
+/* first line */
+
+#csHero .cs-headline-small {
+
+  display: block;
+
+  font-size:
+    clamp(25px, 3vw, 40px);
+
+  font-weight: 500;
+
+  color:
+    var(--white-soft);
+
+  opacity: 0;
+
+  transform:
+    translateY(45px);
+
+  transition:
+    opacity .8s ease .24s,
+    transform 1s var(--ease) .24s;
+
+}
+
+
+#csHero.is-in .cs-headline-small {
+
+  opacity: 1;
+
+  transform:
+    translateY(0);
+
+}
+
+
+
+/* main line */
+
+#csHero .cs-headline-main {
+
+  display: block;
+
+  margin-top:
+    8px;
+
+  font-size:
+    clamp(43px, 6.15vw, 76px);
+
+  font-weight: 700;
+
+  color:
+    var(--white);
+
+  opacity: 0;
+
+  transform:
+    translateY(55px);
+
+  transition:
+    opacity .9s ease .32s,
+    transform 1.05s var(--ease) .32s;
+
+}
+
+
+#csHero.is-in .cs-headline-main {
+
+  opacity: 1;
+
+  transform:
+    translateY(0);
+
+}
+
+
+
+/* final line */
+
+#csHero .cs-headline-last {
+
+  display: flex;
+
+  align-items: baseline;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap:
+    clamp(8px, 1vw, 14px);
+
+  margin-top:
+    13px;
+
+  opacity: 0;
+
+  transform:
+    translateY(55px);
+
+  transition:
+    opacity .9s ease .4s,
+    transform 1.05s var(--ease) .4s;
+
+}
+
+
+#csHero.is-in .cs-headline-last {
+
+  opacity: 1;
+
+  transform:
+    translateY(0);
+
+}
+
+
+#csHero .cs-were {
+
+  font-size:
+    clamp(25px, 3vw, 39px);
+
+  font-weight: 500;
+
+  color:
+    var(--white-soft);
+
+}
+
+
+#csHero .cs-ready {
+
+  position: relative;
+
+  display: inline-block;
+  isolation: isolate;
+
+  font-family:
+    'Archivo',
+    sans-serif;
+
+  font-size:
+    clamp(38px, 5.25vw, 67px);
+
+  font-weight: 800;
+
+  font-style: normal;
+
+  letter-spacing:
+    -.045em;
+
+  color:
+    var(--red-light);
+
+}
+
+
+
+/* red marker */
+
+#csHero .cs-ready::before {
+
+  content: "";
+
+  position: absolute;
+
+  z-index: -1;
+
+  left:
+    0;
+
+  right:
+    0;
+
+  top:
+    0;
+
+  bottom:
+    0;
+
+  background:
+    #FFD83D;
+
+  transform:
+    scaleX(0);
+
+  transform-origin:
+    left;
+
+  transition:
+    transform .8s var(--ease) .95s;
+
+}
+
+
+#csHero.is-in .cs-ready::before {
+
+  transform:
+    scaleX(1);
+
+}
+
+
+
+/* gold underline */
+
+
+#csHero.is-in .cs-ready::after {
+
+  transform:
+    scaleX(1);
+
+}
+
+
+
+/* ============================================================
+   PROMISE
+   ============================================================ */
+
+#csHero .cs-promise {
+
+  margin-top:
+    clamp(31px, 4vh, 42px);
+
+  opacity: 0;
+
+  transform:
+    translateY(18px);
+
+  transition:
+    opacity .8s ease .55s,
+    transform .95s var(--ease) .55s;
+
+}
+
+
+#csHero.is-in .cs-promise {
+
+  opacity: 1;
+
+  transform:
+    translateY(0);
+
+}
+
+
+#csHero .cs-promise-main {
+
+  margin: 0;
+
+  font-size:
+    clamp(19px, 2vw, 27px);
+
+  line-height: 1.2;
+
+  font-weight: 500;
+
+  color:
+    var(--white-soft);
+
+}
+
+
+#csHero .cs-promise-main strong {
+
+  font-weight: 700;
+
+  color:
+    var(--white);
+
+}
+
+
+#csHero .cs-promise-sub {
+
+  margin:
+    8px 0 0;
+
+  max-width:
+    720px;
+
+  font-size:
+    clamp(12.5px, 1vw, 15px);
+
+  line-height: 1.5;
+
+  color:
+    var(--white-dim);
+
+}
+
+
+#csHero .cs-promise-sub strong {
+
+  color:
+    var(--white);
+
+  font-weight: 600;
+
+}
+
+
+#csHero .cs-promise-sub em {
+
+  font-family:
+    'Archivo',
+    sans-serif;
+
+  font-style: normal;
+
+  font-size: 1.34em;
+
+  color:
+    var(--red-light);
+
+  font-weight: 700;
+
+}
+
+
+
+/* ============================================================
+   METHOD
+   ============================================================ */
+
+#csHero .cs-method {
+
+  margin:
+    12px 0 0;
+
+  font-size:
+    clamp(11px, .9vw, 13px);
+
+  color:
+    var(--white-dim);
+
+  font-weight: 400;
+
+}
+
+
+#csHero .cs-method strong {
+
+  color:
+    var(--white);
+
+  font-weight: 600;
+
+}
+
+
+
+/* ============================================================
+   CTA
+   ============================================================ */
+
+#csHero .cs-actions {
+
+  margin-top:
+    clamp(21px, 3vh, 29px);
+
+  opacity: 0;
+
+  transform:
+    translateY(17px);
+
+  transition:
+    opacity .8s ease .68s,
+    transform .95s var(--ease) .68s;
+
+}
+
+
+#csHero.is-in .cs-actions {
+
+  opacity: 1;
+
+  transform:
+    translateY(0);
+
+}
+
+
+#csHero .cs-btn,
+#csHero .cs-btn:hover,
+#csHero .cs-btn:focus,
+#csHero .cs-btn:visited {
+
+  text-decoration:
+    none !important;
+
+}
+
+
+#csHero .cs-btn {
+
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  min-width: 248px;
+
+  padding:
+    16px 27px;
+
+  border:
+    1px solid
+    var(--red);
+
+  border-radius:
+    3px;
+
+  background:
+    var(--red);
+
+  color:
+    #FFFFFF;
+
+  font-family:
+    'Archivo',
+    sans-serif;
+
+  font-size:
+    14px;
+
+  font-weight: 700;
+
+  letter-spacing:
+    .045em;
+
+  text-transform:
+    uppercase;
+
+  overflow:
+    hidden;
+
+  isolation: isolate;
+
+  transition:
+    background .28s ease;
+
+}
+
+
+#csHero .cs-btn::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  bottom: 0;
+
+  left: -25%;
+
+  width: 20%;
+
+  background:
+    rgba(255,255,255,.28);
+
+  transform:
+    skewX(-22deg)
+    translateX(-180px);
+
+  transition:
+    transform .7s var(--ease);
+
+  pointer-events:
+    none;
+
+}
+
+
+#csHero .cs-btn:hover::before {
+
+  transform:
+    skewX(-22deg)
+    translateX(700px);
+
+}
+
+
+#csHero .cs-btn:hover {
+
+  transform:
+    translateY(-2px);
+
+  background:
+    #C21C14;
+
+}
+
+
+#csHero .cs-btn svg {
+
+  width: 15px;
+
+  height: 15px;
+
+  flex: 0 0 auto;
+
+  transition:
+    transform .28s var(--ease);
+
+}
+
+
+#csHero .cs-btn:hover svg {
+
+  transform:
+    translateX(4px);
+
+}
+
+
+
+/* Canonical fast continuous CTA motion */
+#csHero .cs-btn.true-loop{
+  animation:TrueLoop 1.08s linear infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+@keyframes TrueLoop{
+  0%{transform:translate3d(0,0,0) scale(1);}
+  7%{transform:translate3d(-4px,-2px,0) rotate(-1.5deg) scale(1.025);}
+  14%{transform:translate3d(4px,0,0) rotate(1.7deg) scale(1.045);}
+  21%{transform:translate3d(-5px,-1px,0) rotate(-1.8deg) scale(1.05);}
+  28%{transform:translate3d(5px,0,0) rotate(1.5deg) scale(1.042);}
+  35%{transform:translate3d(-4px,-1px,0) rotate(-1.2deg) scale(1.032);}
+  43%{transform:translate3d(3px,0,0) rotate(.8deg) scale(1.02);}
+  52%{transform:translate3d(-2px,0,0) rotate(-.45deg) scale(1.012);}
+  62%{transform:translate3d(1px,0,0) rotate(.2deg) scale(1.006);}
+  72%{transform:translate3d(0,0,0) rotate(0deg) scale(1);}
+  84%{transform:translate3d(0,-1px,0) rotate(0deg) scale(1.008);}
+  100%{transform:translate3d(0,0,0) rotate(0deg) scale(1);}
+}
+
+/* ============================================================
+   TRUST
+   ============================================================ */
+
+#csHero .cs-trust {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 13px;
+
+  width: 100%;
+
+  max-width: 650px;
+
+  margin-top:
+    clamp(20px, 3vh, 28px);
+
+  padding-top:
+    13px;
+
+
+  opacity: 0;
+
+  transform:
+    translateY(13px);
+
+  transition:
+    opacity .8s ease .8s,
+    transform .9s var(--ease) .8s;
+
+}
+
+
+#csHero.is-in .cs-trust {
+
+  opacity: 1;
+
+  transform:
+    translateY(0);
+
+}
+
+
+#csHero .cs-avatars {
+
+  display: flex;
+
+  flex: 0 0 auto;
+
+}
+
+
+#csHero .cs-avatars span {
+
+  width: 27px;
+
+  height: 27px;
+
+  border-radius: 50%;
+
+  background-size: cover;
+
+  background-position: center;
+
+  border:
+    2px solid
+    var(--black);
+
+  margin-left:
+    -8px;
+
+}
+
+
+#csHero .cs-avatars span:first-child {
+
+  margin-left:
+    0;
+
+}
+
+
+#csHero .cs-trust-line {
+
+  margin: 0;
+
+  font-size:
+    clamp(10.5px, .86vw, 12.5px);
+
+  line-height: 1.4;
+
+  color:
+    var(--white-dim);
+
+}
+
+
+#csHero .cs-trust-line strong {
+
+  color:
+    var(--white);
+
+  font-weight: 600;
+
+}
+
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  #csHero {
+
+    min-height:
+      640px;
+
+    padding:
+      42px
+      22px
+      48px;
+
+  }
+
+
+  #csHero .cs-headline-main {
+
+    font-size:
+      clamp(40px, 7vw, 63px);
+
+  }
+
+
+  #csHero .cs-ready {
+
+    font-size:
+      clamp(35px, 5.8vw, 55px);
+
+  }
+
+}
+
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+  #csHero {
+
+    min-height:
+      auto;
+
+    padding:
+      36px
+      18px
+      42px;
+
+  }
+
+
+  #csHero .cs-wrap {
+
+    max-width:
+      100%;
+
+  }
+
+
+  #csHero .cs-brand {
+
+    margin-bottom:
+      19px;
+
+  }
+
+
+  #csHero .cs-brand-name {
+
+    font-size:
+      11px;
+
+  }
+
+
+  #csHero .cs-positioning {
+
+    margin-bottom:
+      15px;
+
+  }
+
+
+  #csHero .cs-positioning p {
+
+    font-size:
+      8px;
+
+    letter-spacing:
+      .15em;
+
+    line-height:
+      1.45;
+
+  }
+
+
+  #csHero .cs-headline-small {
+
+    font-size:
+      clamp(22px, 6vw, 28px);
+
+  }
+
+
+  #csHero .cs-headline-main {
+
+    margin-top:
+      7px;
+
+    font-size:
+      clamp(35px, 10.4vw, 51px);
+
+    line-height:
+      .92;
+
+  }
+
+
+  #csHero .cs-headline-last {
+
+    margin-top:
+      11px;
+
+    gap:
+      6px;
+
+  }
+
+
+  #csHero .cs-were {
+
+    font-size:
+      clamp(21px, 5.7vw, 27px);
+
+  }
+
+
+  #csHero .cs-ready {
+
+    font-size:
+      clamp(31px, 8.8vw, 45px);
+
+  }
+
+
+  #csHero .cs-ready::before {
+
+    left:
+      0;
+
+    right:
+      0;
+
+    top:
+      0;
+
+    bottom:
+      0;
+
+  }
+
+
+  #csHero .cs-ready::after {
+
+    bottom:
+      -7px;
+
+  }
+
+
+  #csHero .cs-promise {
+
+    margin-top:
+      29px;
+
+  }
+
+
+  #csHero .cs-promise-main {
+
+    font-size:
+      18px;
+
+  }
+
+
+  #csHero .cs-promise-sub {
+
+    font-size:
+      12.5px;
+
+    max-width:
+      340px;
+
+  }
+
+
+  #csHero .cs-break {
+
+    display:
+      block;
+
+  }
+
+
+  #csHero .cs-method {
+
+    font-size:
+      11px;
+
+  }
+
+
+  #csHero .cs-actions {
+
+    margin-top:
+      21px;
+
+    width:
+      100%;
+
+  }
+
+
+  #csHero .cs-btn {
+
+    width:
+      min(100%, 310px);
+
+    min-width:
+      0;
+
+    padding:
+      15px
+      20px;
+
+    font-size:
+      12.5px;
+
+  }
+
+
+  #csHero .cs-trust {
+
+    flex-direction:
+      column;
+
+    gap:
+      9px;
+
+    margin-top:
+      21px;
+
+  }
+
+
+  #csHero .cs-trust-line {
+
+    max-width:
+      290px;
+
+    font-size:
+      10.5px;
+
+  }
+
+
+  #csHero .cs-orbit-1 {
+
+    width:
+      470px;
+
+    height:
+      470px;
+
+    right:
+      -260px;
+
+    top:
+      -80px;
+
+  }
+
+
+  #csHero .cs-orbit-2 {
+
+    width:
+      320px;
+
+    height:
+      320px;
+
+    right:
+      -170px;
+
+    top:
+      -5px;
+
+  }
+
+
+  #csHero .cs-orbit-point {
+
+    right:
+      11%;
+
+    top:
+      19%;
+
+  }
+
+
+  #csHero .cs-corner-left {
+
+    left:
+      2%;
+
+    top:
+      16%;
+
+  }
+
+
+  #csHero .cs-corner-right {
+
+    right:
+      2%;
+
+    bottom:
+      13%;
+
+  }
+
+}
+
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 420px) {
+
+  #csHero {
+
+    padding:
+      32px
+      16px
+      39px;
+
+  }
+
+
+  #csHero .cs-headline-main {
+
+    font-size:
+      11.4vw;
+
+  }
+
+
+  #csHero .cs-headline-small {
+
+    font-size:
+      6.1vw;
+
+  }
+
+
+  #csHero .cs-were {
+
+    font-size:
+      5.7vw;
+
+  }
+
+
+  #csHero .cs-ready {
+
+    font-size:
+      9vw;
+
+  }
+
+
+  #csHero .cs-promise-main {
+
+    font-size:
+      17px;
+
+  }
+
+
+  #csHero .cs-promise-sub {
+
+    font-size:
+      12px;
+
+  }
+
+  #csHero .cs-promise-sub em {
+
+    font-family:
+      'Archivo',
+      sans-serif;
+
+    font-style:
+      normal;
+
+    font-size:
+      1.28em;
+
+  }
+
+}
+
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  #csHero .cs-brand,
+  #csHero .cs-positioning,
+  #csHero .cs-headline-small,
+  #csHero .cs-headline-main,
+  #csHero .cs-headline-last,
+  #csHero .cs-promise,
+  #csHero .cs-actions,
+  #csHero .cs-trust,
+  #csHero .cs-orbit,
+  #csHero .cs-orbit-point {
+
+    opacity: 1 !important;
+
+    transform:
+      none !important;
+
+    transition:
+      none !important;
+
+  }
+
+
+  #csHero .cs-ready::before {
+
+    transform:
+      scaleX(1) !important;
+
+    transition:
+      none !important;
+
+  }
+
+
+  #csHero .cs-btn::before {
+
+    display:
+      none;
+
+  }
+
+  #csHero .cs-btn.true-loop{
+    animation:none !important;
+  }
+
+}
+
+</style>

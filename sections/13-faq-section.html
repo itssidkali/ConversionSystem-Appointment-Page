@@ -1,0 +1,557 @@
+
+
+<div id="csFaq">
+  <div class="cs8-wrap">
+
+    <h2 class="cs8-h2">
+      <span class="cs8-h2-kicker">You might be thinking…</span>
+      <span class="cs8-red">We answer <mark class="cs8-highlight">before you <span class="cs8-ask-black">ASK.</span></mark></span>
+    </h2>
+
+    <div class="cs8-cols">
+
+      <aside class="cs8-intro">
+        <h3>Your doubts are normal.</h3>
+        <p>Most jewellery brands have the same questions before investing in improving their online store.</p>
+        <p>We believe the right decision comes from clarity, not pressure.</p>
+        <a class="cs8-btn" href="https://api.leadconnectorhq.com/widget/form/349k6XqxJsWlr88axN4V">
+          <span>Get Your Questions Answered</span>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </aside>
+
+      <div class="cs8-list">
+
+        <div class="cs8-item">
+          <button class="cs8-q" type="button" aria-expanded="false"><span>I already have a website. Why change it?</span><i class="cs8-plus"></i></button>
+          <div class="cs8-a"><p>
+            A beautiful website can get attention.
+
+But jewellery customers aren't only asking:
+
+“Do I like this?”
+
+They're also silently asking:
+
+“Can I trust this brand?” “Will the product actually look like this?” “Is it worth this price?” “What happens if something goes wrong?”
+
+If your website doesn't answer those questions...
+
+looking premium isn't enough to make someone buy.
+          </p></div>
+        </div>
+
+        <div class="cs8-item">
+          <button class="cs8-q" type="button" aria-expanded="false"><span>Do I need more ads first?</span><i class="cs8-plus"></i></button>
+          <div class="cs8-a"><p>
+            Your ad's job is to earn the click.
+But the click isn't the purchase.
+Someone can see your jewellery, click the ad, visit your website and still leave because something after the click creates doubt, friction or hesitation.
+
+An ad can win the click and still lose the customer.
+          </p></div>
+        </div>
+
+        <div class="cs8-item">
+          <button class="cs8-q" type="button" aria-expanded="false"><span>My jewellery is premium. Why aren't people buying?</span><i class="cs8-plus"></i></button>
+          <div class="cs8-a"><p>
+            Premium products need a premium buying experience. Customers need confidence in the
+            brand, quality and decision before checkout. The goal isn't to remove human connection.
+
+It's to build a buying experience that can answer doubts, build trust and create confidence before the customer ever needs to message you.
+          </p></div>
+        </div>
+
+        <div class="cs8-item">
+          <button class="cs8-q" type="button" aria-expanded="false"><span>Will this work for my jewellery brand?</span><i class="cs8-plus"></i></button>
+          <div class="cs8-a"><p>
+           Simply when orders slow down, the instinct is usually to increase the Meta budget.
+
+But if interested people are already reaching your website and leaving without buying...
+
+sending even more people into the same buying experience won't fix the underlying problem. If customers visit your store but hesitate before purchasing, improving the buying
+            journey can create a stronger foundation for growth. 
+          </p></div>
+        </div>
+
+        <div class="cs8-item">
+          <button class="cs8-q" type="button" aria-expanded="false"><span>Do I need to rebuild everything?</span><i class="cs8-plus"></i></button>
+          <div class="cs8-a"><p>
+            No. We focus on identifying what is stopping conversions and improving the areas
+            that matter most.
+          </p></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var sec = document.getElementById('csFaq');
+  if(!sec) return;
+
+  sec.querySelectorAll('.cs8-item').forEach(function(it){
+    var btn = it.querySelector('.cs8-q'), panel = it.querySelector('.cs8-a');
+    if(!btn || !panel) return;
+    btn.addEventListener('click', function(){
+      var open = it.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      panel.style.maxHeight = open ? panel.scrollHeight + 'px' : '0px';
+    });
+  });
+  window.addEventListener('resize', function(){
+    sec.querySelectorAll('.cs8-item.is-open').forEach(function(it){
+      var p = it.querySelector('.cs8-a');
+      if(p) p.style.maxHeight = p.scrollHeight + 'px';
+    });
+  });
+
+  /* ---- CONVERSIONSYSTEM TRUE JS LOOP CTA™ ---- */
+  var cta = sec.querySelector('.cs8-btn');
+  var ctaLoopTimer = null;
+
+  function startCTAAnimation() {
+    if (!cta) return;
+
+    /* Exact same fast-loop restart used by the working CTA. */
+    cta.classList.remove('cs8-true-loop');
+    void cta.offsetWidth;
+    cta.classList.add('cs8-true-loop');
+  }
+
+  function stopCTAAnimation() {
+    if (!cta) return;
+    cta.classList.remove('cs8-true-loop');
+  }
+
+  if (cta) {
+    cta.addEventListener('mouseenter', function () {
+      cta.classList.add('cs8-cta-hover');
+    });
+
+    cta.addEventListener('mouseleave', function () {
+      cta.classList.remove('cs8-cta-hover');
+    });
+
+    cta.addEventListener('focus', function () {
+      cta.classList.add('cs8-cta-hover');
+    });
+
+    cta.addEventListener('blur', function () {
+      cta.classList.remove('cs8-cta-hover');
+    });
+
+    /* Continuous 1.08s visual loop, restarted by JS every cycle. */
+    setTimeout(startCTAAnimation, 180);
+    setTimeout(startCTAAnimation, 650);
+
+    ctaLoopTimer = setInterval(function () {
+      if (!document.hidden && sec.classList.contains('is-in')) {
+        startCTAAnimation();
+      }
+    }, 1080);
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        stopCTAAnimation();
+      } else if (sec.classList.contains('is-in')) {
+        startCTAAnimation();
+      }
+    });
+  }
+
+
+  function revealHeadlineHighlight(){
+    var mark = sec.querySelector('.cs8-highlight');
+    if(!mark) return;
+
+    mark.classList.remove('is-revealed');
+    void mark.offsetWidth;
+    mark.classList.add('is-revealed');
+  }
+
+  function play(){
+    sec.classList.remove('is-in');
+    void sec.offsetWidth;
+    sec.classList.add('is-in');
+    startCTAAnimation();
+
+    setTimeout(revealHeadlineHighlight, 520);
+  }
+
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          play();
+        }else{
+          sec.classList.remove('is-in');
+          stopCTAAnimation();
+        }
+      });
+    },{threshold:.12}).observe(sec);
+  }else{
+    play();
+  }
+})();
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+#csFaq{
+  --paper:#FFFFFF;
+  --ink:#0A0A0C;
+  --red:#E0342B;
+  --yellow:#F0B90B;
+  --yellow-deep:#FFCE2B;
+  --muted:#5B5B60;
+  --hair:rgba(10,10,12,.12);
+  --ease:cubic-bezier(.16,1,.3,1);
+
+  width:100vw;max-width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+
+  position:relative;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  padding:clamp(52px,7vh,84px) clamp(22px,5vw,64px);
+  box-sizing:border-box;
+  overflow:hidden;
+}
+#csFaq *,#csFaq *::before,#csFaq *::after{box-sizing:border-box}
+#csFaq .cs8-wrap{width:100%;max-width:1180px;margin:0 auto}
+
+/* ---------- HEADLINE ---------- */
+#csFaq .cs8-h2{
+  width:100%;
+  max-width:900px;
+  margin:0 auto clamp(40px,5vh,58px);
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  font-family:'Archivo',sans-serif;
+  text-align:center;
+  line-height:.96;
+  letter-spacing:-.045em;
+}
+
+#csFaq .cs8-h2-kicker{
+  align-self:flex-start;
+  text-align:left;
+}
+
+#csFaq .cs8-h2-kicker{
+  display:block;
+  font-size:clamp(20px,2.2vw,29px);
+  font-weight:700;
+  line-height:1.08;
+  letter-spacing:-.025em;
+  color:#0A0A0C;
+  margin-bottom:8px;
+}
+
+#csFaq .cs8-red{
+  display:block;
+  color:var(--red);
+  font-size:clamp(42px,5.3vw,64px);
+  font-weight:800;
+  line-height:.94;
+  letter-spacing:-.065em;
+}
+
+#csFaq .cs8-highlight{
+  position:relative;
+  z-index:0;
+  display:inline-block;
+  margin-left:4px;
+  padding:1px 6px 3px;
+
+  color:var(--red);
+  background:transparent;
+  font:inherit;
+  line-height:inherit;
+  letter-spacing:inherit;
+  white-space:nowrap;
+  border-radius:3px;
+}
+
+#csFaq .cs8-ask-black{
+  color:#0A0A0C;
+}
+
+#csFaq .cs8-highlight::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  left:0;
+  right:0;
+  top:6%;
+  bottom:4%;
+
+  background:#FFD83D;
+  border-radius:2px;
+
+  transform:scaleX(0);
+  transform-origin:left center;
+  opacity:0;
+}
+
+#csFaq .cs8-highlight.is-revealed::before{
+  animation:cs8YellowMarkerReveal .82s cubic-bezier(.16,1,.3,1) both;
+}
+
+@keyframes cs8YellowMarkerReveal{
+  0%{transform:scaleX(0);opacity:.18}
+  58%{transform:scaleX(1.04);opacity:1}
+  78%{transform:scaleX(.985);opacity:1}
+  100%{transform:scaleX(1);opacity:1}
+}
+
+/* ---------- LAYOUT ---------- */
+#csFaq .cs8-cols{
+  display:grid;
+  grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
+  gap:clamp(28px,5vw,72px);
+  align-items:start;
+}
+
+#csFaq .cs8-intro{display:flex;flex-direction:column;align-items:flex-start}
+#csFaq .cs8-intro h3{
+  margin:0 0 16px;
+  font-family:'Archivo',sans-serif;font-weight:800;
+  font-size:clamp(18px,1.9vw,26px);letter-spacing:-.02em;
+}
+#csFaq .cs8-intro p{
+  margin:0 0 14px;max-width:38ch;
+  font-size:clamp(13.5px,1vw,15.5px);line-height:1.7;color:var(--muted);
+}
+#csFaq .cs8-btn,
+#csFaq .cs8-btn:hover,
+#csFaq .cs8-btn:focus,
+#csFaq .cs8-btn:visited{
+  text-decoration:none !important;
+}
+
+#csFaq .cs8-btn{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+
+  width:fit-content;
+  max-width:100%;
+  min-height:60px;
+  padding:16px 30px;
+
+  border:1px solid #D5B51B;
+  border-radius:13px;
+
+  background:#FFD83D;
+  color:#080808;
+
+  font-family:'Archivo',sans-serif;
+  font-size:15px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:.045em;
+  text-transform:uppercase;
+
+  box-shadow:none;
+  outline:none;
+  cursor:pointer;
+  will-change:transform;
+  transform-origin:center center;
+
+  transition:
+    background-color .12s ease,
+    border-color .12s ease;
+}
+
+#csFaq .cs8-btn span,
+#csFaq .cs8-btn svg{
+  position:relative;
+  z-index:2;
+}
+
+#csFaq .cs8-btn svg{
+  width:17px;
+  height:17px;
+  flex:0 0 auto;
+  stroke-width:2.7;
+  transition:transform .14s ease;
+}
+
+#csFaq .cs8-btn:hover,
+#csFaq .cs8-btn.cs8-cta-hover{
+  background:#FFDE57;
+  border-color:#B99A09;
+}
+
+#csFaq .cs8-btn:hover svg{
+  transform:translateX(3px);
+}
+
+/* Same continuous visible fast loop as Create My Conversion System. */
+#csFaq .cs8-btn.cs8-true-loop{
+  animation:cs8TrueLoop 1.08s linear infinite;
+}
+
+@keyframes cs8TrueLoop{
+  0%{transform:translate3d(0,0,0) scale(1);}
+  7%{transform:translate3d(-4px,-2px,0) rotate(-1.5deg) scale(1.025);}
+  14%{transform:translate3d(4px,0,0) rotate(1.7deg) scale(1.045);}
+  21%{transform:translate3d(-5px,-1px,0) rotate(-1.8deg) scale(1.05);}
+  28%{transform:translate3d(5px,0,0) rotate(1.5deg) scale(1.042);}
+  35%{transform:translate3d(-4px,-1px,0) rotate(-1.2deg) scale(1.032);}
+  43%{transform:translate3d(3px,0,0) rotate(.8deg) scale(1.02);}
+  52%{transform:translate3d(-2px,0,0) rotate(-.45deg) scale(1.012);}
+  62%{transform:translate3d(1px,0,0) rotate(.2deg) scale(1.006);}
+  72%{transform:translate3d(0,0,0) rotate(0deg) scale(1);}
+  84%{transform:translate3d(0,-1px,0) rotate(0deg) scale(1.008);}
+  100%{transform:translate3d(0,0,0) rotate(0deg) scale(1);}
+}
+
+#csFaq .cs8-btn:focus-visible{
+  outline:2px solid #FFD83D;
+  outline-offset:4px;
+}
+
+#csFaq .cs8-btn{opacity:1;}
+/* ---------- FAQ LIST ---------- */
+#csFaq .cs8-list{border-top:1px solid var(--hair)}
+#csFaq .cs8-item{position:relative;border-bottom:1px solid var(--hair)}
+#csFaq .cs8-item::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--red);
+  transform:scaleY(0);transform-origin:top center;
+  transition:transform .45s var(--ease);
+}
+#csFaq .cs8-item.is-open::before{transform:scaleY(1)}
+
+#csFaq .cs8-q{
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;
+  background:none;border:0;cursor:pointer;color:inherit;font:inherit;text-align:left;
+  padding:clamp(18px,2.4vh,24px) clamp(12px,1.4vw,20px);
+}
+#csFaq .cs8-q > span{
+  font-family:'Archivo',sans-serif;font-weight:700;
+  font-size:clamp(15px,1.35vw,19px);letter-spacing:-.015em;line-height:1.35;
+  transition:color .3s ease;
+}
+#csFaq .cs8-q:hover > span,
+#csFaq .cs8-item.is-open .cs8-q > span{color:var(--red)}
+
+/* plus turns into a minus */
+#csFaq .cs8-plus{position:relative;width:16px;height:16px;flex:none}
+#csFaq .cs8-plus::before,
+#csFaq .cs8-plus::after{
+  content:"";position:absolute;left:50%;top:50%;background:var(--red);
+  transition:transform .45s var(--ease);
+}
+#csFaq .cs8-plus::before{width:16px;height:2px;transform:translate(-50%,-50%)}
+#csFaq .cs8-plus::after{width:2px;height:16px;transform:translate(-50%,-50%)}
+#csFaq .cs8-item.is-open .cs8-plus::after{transform:translate(-50%,-50%) scaleY(0)}
+#csFaq .cs8-item.is-open .cs8-plus::before{transform:translate(-50%,-50%) rotate(180deg)}
+
+#csFaq .cs8-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
+#csFaq .cs8-a p{
+  margin:0;padding:0 clamp(12px,1.4vw,20px) clamp(20px,2.6vh,26px);max-width:60ch;
+  font-size:clamp(13.5px,1vw,15px);line-height:1.75;color:var(--muted);
+}
+
+/* ---------- ENTRANCE ---------- */
+#csFaq .cs8-h2-kicker,
+#csFaq .cs8-red,
+#csFaq .cs8-intro h3, #csFaq .cs8-intro p,
+#csFaq .cs8-item{opacity:0;transform:translateY(16px)}
+#csFaq.is-in .cs8-h2-kicker,
+#csFaq.is-in .cs8-red,
+#csFaq.is-in .cs8-intro h3, #csFaq.is-in .cs8-intro p,
+#csFaq.is-in .cs8-item{animation:cs8Fade .8s var(--ease) forwards}
+@keyframes cs8Fade{to{opacity:1;transform:translateY(0)}}
+#csFaq.is-in .cs8-h2-kicker{animation-delay:.05s}
+#csFaq.is-in .cs8-red{animation-delay:.15s}
+#csFaq.is-in .cs8-intro h3, #csFaq.is-in .cs8-intro p:nth-child(1){animation-delay:.28s}
+#csFaq.is-in .cs8-intro h3, #csFaq.is-in .cs8-intro p:nth-child(2){animation-delay:.35s}
+#csFaq.is-in .cs8-intro h3, #csFaq.is-in .cs8-intro p:nth-child(3){animation-delay:.42s}
+#csFaq.is-in .cs8-intro h3, #csFaq.is-in .cs8-intro p:nth-child(4){animation-delay:.50s}
+#csFaq.is-in .cs8-item:nth-child(1){animation-delay:.34s}
+#csFaq.is-in .cs8-item:nth-child(2){animation-delay:.42s}
+#csFaq.is-in .cs8-item:nth-child(3){animation-delay:.50s}
+#csFaq.is-in .cs8-item:nth-child(4){animation-delay:.58s}
+#csFaq.is-in .cs8-item:nth-child(5){animation-delay:.66s}
+
+/* ---------- MOBILE ---------- */
+@media (max-width:860px){
+  #csFaq{padding:48px 20px 56px}
+
+  #csFaq .cs8-h2{
+    margin-bottom:38px;
+  }
+
+  #csFaq .cs8-h2-kicker{
+    align-self:flex-start;
+    text-align:left;
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:7px;
+  }
+
+  #csFaq .cs8-red{
+    align-self:center;
+    text-align:center;
+  }
+
+  #csFaq .cs8-red{
+    font-size:clamp(34px,9.3vw,46px);
+    line-height:.96;
+  }
+
+  #csFaq .cs8-highlight{
+    margin-left:2px;
+    padding:1px 4px 3px;
+  }
+  #csFaq .cs8-cols{grid-template-columns:1fr;gap:32px}
+  #csFaq .cs8-intro p{max-width:none}
+  #csFaq .cs8-btn{
+    width:fit-content;
+    max-width:100%;
+    min-height:56px;
+    padding:15px 20px;
+    border-radius:12px;
+    font-size:13.5px;
+  }
+  #csFaq .cs8-q{gap:16px;padding:18px 10px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  #csFaq .cs8-btn{
+    animation:none !important;
+    transition:none!important;
+    transform:none!important;
+  }
+
+  #csFaq .cs8-highlight::before{
+    animation:none !important;
+    transform:scaleX(1) !important;
+    opacity:1 !important;
+  }
+  #csFaq .cs8-h2 span,#csFaq .cs8-intro h3, #csFaq .cs8-intro p,#csFaq .cs8-item{
+    opacity:1;transform:none;animation:none;
+  }
+  #csFaq .cs8-item::before,#csFaq .cs8-plus::before,
+  #csFaq .cs8-plus::after,#csFaq .cs8-a{transition:none}
+}
+
+</style>

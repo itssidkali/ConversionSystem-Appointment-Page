@@ -1,0 +1,419 @@
+<!-- ============================================================
+     ConversionSystem™ — FREE STRATEGY SESSION VALUE-ANCHOR SECTION
+     Premium booking section inspired by the supplied reference.
+     No gradients.
+     ============================================================ -->
+
+<section id="csBook">
+  <div class="csBook-wrap">
+
+    <div class="csBook-positioning">
+      ONLINE SYSTEM BUILDER FOR <span>JEWELLERY BRANDS</span>
+    </div>
+
+    <h2 class="csBook-title">
+      Book Your Free Strategy Session
+    </h2>
+
+    <p class="csBook-sub">
+      Pick a time below and let’s identify what’s stopping your jewellery store from converting more of the traffic you already have.
+    </p>
+
+    <div class="csBook-value" aria-label="Private Strategy Session Included">
+      <div class="csBook-value-main">
+        <span class="csBook-value-title">Private Strategy Session</span>
+        <span class="csBook-value-included">Included</span>
+      </div>
+
+      <div class="csBook-price">
+        <span class="csBook-old-price">₹3,000</span>
+        <span class="csBook-free">FREE</span>
+      </div>
+    </div>
+
+    <a class="csBook-btn" href="https://api.leadconnectorhq.com/widget/form/349k6XqxJsWlr88axN4V">
+      <span>CLAIM FREE</span>
+    </a>
+
+  </div>
+</section>
+
+<script>
+(function(){
+  var sec = document.getElementById('csBook');
+  if(!sec) return;
+
+  function activate(){
+    sec.classList.add('is-in');
+  }
+
+  /*
+     Keep the section activated once it has appeared.
+     Removing "is-in" when the section leaves the viewport can
+     leave the CTA hidden after returning from the booking form.
+  */
+  if('IntersectionObserver' in window){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          activate();
+        }
+      });
+    },{threshold:.2});
+
+    observer.observe(sec);
+  }else{
+    activate();
+  }
+
+  /* Re-activate safely when the browser restores the page via Back. */
+  window.addEventListener('pageshow', function(){
+    activate();
+  });
+
+  /* Extra safeguard for tab/page restoration. */
+  document.addEventListener('visibilitychange', function(){
+    if(!document.hidden) activate();
+  });
+
+  setTimeout(activate, 80);
+})();
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+#csBook{
+  --paper:#FFFFFF;
+  --ink:#0A0A0C;
+  --red:#B3160F;
+  --yellow:#FFD83D;
+  --green:#159447;
+  --muted:#5B5B60;
+  --grey:#8F8F93;
+  --ease:cubic-bezier(.16,1,.3,1);
+
+  width:100vw;
+  max-width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  padding:clamp(74px,9.5vh,116px) 22px clamp(78px,10vh,122px);
+  background:var(--paper);
+  color:var(--ink);
+  text-align:center;
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  overflow:hidden;
+  box-sizing:border-box;
+}
+
+#csBook *,
+#csBook *::before,
+#csBook *::after{
+  box-sizing:border-box;
+}
+
+#csBook .csBook-wrap{
+  width:100%;
+  max-width:920px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* ---------- ENTRANCE ---------- */
+#csBook .csBook-positioning,
+#csBook .csBook-title,
+#csBook .csBook-sub,
+#csBook .csBook-value,
+#csBook .csBook-btn span{
+  position:relative;
+  z-index:2;
+}
+
+#csBook .csBook-btn{
+  opacity:0;
+  transform:translateY(16px);
+}
+
+#csBook.is-in .csBook-positioning,
+#csBook.is-in .csBook-title,
+#csBook.is-in .csBook-sub,
+#csBook.is-in .csBook-value,
+#csBook.is-in .csBook-btn{
+  animation:csBookFade .78s var(--ease) forwards;
+}
+
+#csBook.is-in .csBook-positioning{animation-delay:.04s}
+#csBook.is-in .csBook-title{animation-delay:.13s}
+#csBook.is-in .csBook-sub{animation-delay:.24s}
+#csBook.is-in .csBook-value{animation-delay:.34s}
+#csBook.is-in .csBook-btn{animation-delay:.46s}
+
+@keyframes csBookFade{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ---------- POSITIONING LINE ---------- */
+#csBook .csBook-positioning{
+  display:inline-block;
+  margin:0 0 24px;
+  padding:0;
+
+  color:var(--ink);
+  background:transparent;
+  border:0;
+
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  font-size:clamp(9px,.78vw,11px);
+  font-weight:500;
+  line-height:1.15;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+#csBook .csBook-positioning span{
+  display:inline-block;
+  color:var(--yellow);
+  background:transparent;
+  padding:0;
+  margin-left:.16em;
+  font-family:'Archivo',sans-serif;
+  font-size:1.72em;
+  font-weight:600;
+  line-height:.86;
+  letter-spacing:-.035em;
+  vertical-align:-.05em;
+}
+
+/* ---------- HEADLINE ---------- */
+#csBook .csBook-title{
+  margin:0;
+  max-width:900px;
+
+  font-family:'Archivo',sans-serif;
+  font-size:clamp(42px,6vw,76px);
+  line-height:.97;
+  font-weight:900;
+  letter-spacing:-.055em;
+}
+
+/* ---------- SUB ---------- */
+#csBook .csBook-sub{
+  max-width:635px;
+  margin:19px auto 0;
+  font-size:clamp(14px,1.25vw,18px);
+  line-height:1.55;
+  color:var(--muted);
+}
+
+/* ---------- CROSSED PRICE + FREE ---------- */
+#csBook .csBook-value{
+  display:inline-flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin:16px 0 0;
+  padding:12px 20px 13px;
+  border:1px solid rgba(10,10,12,.12);
+  border-radius:9px;
+  background:#FAFAFA;
+  font-family:'Archivo',sans-serif;
+}
+
+#csBook .csBook-value-main{
+  display:flex;
+  align-items:baseline;
+  justify-content:center;
+  gap:10px;
+}
+
+#csBook .csBook-value-title{
+  color:var(--ink);
+  font-size:clamp(17px,1.7vw,22px);
+  line-height:1;
+  font-weight:600;
+  letter-spacing:-.02em;
+}
+
+#csBook .csBook-value-included{
+  color:var(--green);
+  font-size:clamp(22px,2.3vw,31px);
+  line-height:.9;
+  font-weight:800;
+  letter-spacing:-.035em;
+}
+
+#csBook .csBook-price{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+}
+
+#csBook .csBook-old-price{
+  position:relative;
+  display:inline-block;
+  color:var(--grey);
+  font-size:clamp(18px,1.8vw,25px);
+  line-height:1;
+  font-weight:700;
+  letter-spacing:-.03em;
+}
+
+#csBook .csBook-old-price::after{
+  content:"";
+  position:absolute;
+  left:-2px;
+  right:-2px;
+  top:52%;
+  height:3px;
+  background:var(--grey);
+  transform:rotate(-4deg);
+  transform-origin:center;
+}
+
+#csBook .csBook-free{
+  color:var(--green);
+  font-size:clamp(24px,2.5vw,34px);
+  line-height:.9;
+  font-weight:800;
+  letter-spacing:-.035em;
+}
+
+/* ---------- COMPACT RED GLOW CTA ---------- */
+#csBook .csBook-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  width:220px;
+  max-width:100%;
+  min-height:52px;
+  padding:14px 32px;
+  position:relative;
+  overflow:hidden;
+  background:var(--red);
+  color:#FFFFFF;
+  border:0;
+  border-radius:10px;
+  text-decoration:none;
+  font-family:'Archivo',sans-serif;
+  font-size:clamp(13px,1vw,15px);
+  font-weight:700;
+  line-height:1;
+  letter-spacing:-.01em;
+  box-shadow:0 0 0 1px rgba(179,22,15,.18),0 0 18px rgba(179,22,15,.28);
+  will-change:box-shadow;
+  margin-top:28px;
+}
+
+#csBook .csBook-btn span{
+  position:relative;
+  z-index:2;
+}
+
+#csBook .csBook-btn::before{
+  content:"";
+  position:absolute;
+  left:8%;
+  right:8%;
+  top:-55%;
+  height:58%;
+  border-radius:50%;
+  background:rgba(255,255,255,.15);
+  filter:blur(14px);
+  animation:csBookGlow 1.8s ease-in-out infinite;
+  pointer-events:none;
+  z-index:1;
+}
+
+#csBook .csBook-btn::after{
+  content:"";
+  position:absolute;
+  inset:1px;
+  border-radius:9px;
+  box-shadow:inset 0 0 13px rgba(255,255,255,.08);
+  pointer-events:none;
+}
+
+@keyframes csBookGlow{
+  0%,100%{transform:translateY(-3px);opacity:.25}
+  50%{transform:translateY(11px);opacity:.72}
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width:720px){
+  #csBook{
+    padding:62px 18px 72px;
+  }
+
+  #csBook .csBook-positioning{
+    margin-bottom:20px;
+    padding:0;
+    font-size:8px;
+    letter-spacing:.07em;
+  }
+
+  #csBook .csBook-positioning span{
+    padding:0;
+    font-size:1.58em;
+    line-height:.86;
+  }
+
+  #csBook .csBook-title{
+    max-width:13ch;
+    font-size:clamp(39px,11vw,54px);
+  }
+
+  #csBook .csBook-sub{
+    max-width:40ch;
+    margin-top:16px;
+    font-size:14px;
+  }
+
+  #csBook .csBook-value{
+    margin-top:16px;
+    padding:10px 14px 11px;
+    gap:8px;
+  }
+
+  #csBook .csBook-value-main{
+    gap:9px;
+  }
+
+  #csBook .csBook-price{
+    gap:9px;
+  }
+
+  #csBook .csBook-btn{
+    width:220px;
+    max-width:100%;
+    min-height:52px;
+    padding-left:30px;
+    padding-right:30px;
+    margin-top:24px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  #csBook .csBook-positioning,
+  #csBook .csBook-title,
+  #csBook .csBook-sub,
+  #csBook .csBook-value,
+  #csBook .csBook-btn{
+    opacity:1;
+    transform:none;
+    animation:none;
+  }
+
+  #csBook .csBook-btn::before{
+    animation:none;
+    opacity:.45;
+  }
+}
+</style>

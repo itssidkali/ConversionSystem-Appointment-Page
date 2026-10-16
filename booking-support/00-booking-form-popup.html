@@ -1,0 +1,172 @@
+<!-- ConversionSystem™ — FORM POPUP (same-page) -->
+<div id="csPop" aria-hidden="true">
+  <div class="csp-backdrop"></div>
+  <div class="csp-modal" role="dialog" aria-modal="true" aria-label="Book your strategy session">
+    <button class="csp-close" type="button" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="csp-loading">Loading…</div>
+    <iframe class="csp-frame" title="Booking form" allow="clipboard-write" loading="lazy"></iframe>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FORM_URL = 'https://api.leadconnectorhq.com/widget/form/349k6XqxJsWlr88axN4V';
+  var FORM_ID  = '349k6XqxJsWlr88axN4V';
+
+  var pop = document.getElementById('csPop');
+  if (!pop) return;
+
+  var frame    = pop.querySelector('.csp-frame');
+  var loading  = pop.querySelector('.csp-loading');
+  var closeBtn = pop.querySelector('.csp-close');
+  var backdrop = pop.querySelector('.csp-backdrop');
+  var loaded = false;
+  var lastFocus = null;
+
+  function loadFrame() {
+    if (loaded) return;
+    loaded = true;
+    frame.addEventListener('load', function () {
+      loading.style.display = 'none';
+    });
+    frame.src = FORM_URL;
+  }
+
+  function openPop() {
+    loadFrame();
+    lastFocus = document.activeElement;
+    pop.classList.add('is-open');
+    pop.setAttribute('aria-hidden', 'false');
+    document.documentElement.classList.add('csp-lock');
+    setTimeout(function () { closeBtn.focus(); }, 60);
+  }
+
+  function closePop() {
+    pop.classList.remove('is-open');
+    pop.setAttribute('aria-hidden', 'true');
+    document.documentElement.classList.remove('csp-lock');
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  /* Any link pointing to the form opens the popup */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (a.hasAttribute('data-cs-popup') || href.indexOf(FORM_ID) !== -1) {
+      e.preventDefault();
+      openPop();
+    }
+  }, true);
+
+  closeBtn.addEventListener('click', closePop);
+  backdrop.addEventListener('click', closePop);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && pop.classList.contains('is-open')) closePop();
+  });
+
+  /* Preload the form quietly so it opens instantly */
+  window.addEventListener('load', function () {
+    setTimeout(loadFrame, 2500);
+  });
+})();
+</script>
+
+<style>
+#csPop{
+  position:fixed;
+  inset:0;
+  z-index:2147483000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:16px;
+  visibility:hidden;
+  opacity:0;
+  transition:opacity .25s ease, visibility 0s linear .25s;
+}
+#csPop.is-open{
+  visibility:visible;
+  opacity:1;
+  transition:opacity .25s ease;
+}
+#csPop *,#csPop *::before,#csPop *::after{box-sizing:border-box}
+
+#csPop .csp-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(10,10,12,.78);
+}
+
+#csPop .csp-modal{
+  position:relative;
+  width:100%;
+  max-width:520px;
+  height:min(92vh,760px);
+  background:#FFFFFF;
+  border-radius:14px;
+  overflow:hidden;
+  transform:translateY(18px) scale(.98);
+  transition:transform .35s cubic-bezier(.16,1,.3,1);
+}
+#csPop.is-open .csp-modal{transform:none}
+
+#csPop .csp-frame{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+  background:#FFFFFF;
+}
+
+#csPop .csp-loading{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Inter',system-ui,sans-serif;
+  font-size:13px;
+  color:#5B5B60;
+}
+
+#csPop .csp-close{
+  position:absolute;
+  top:10px;
+  right:10px;
+  z-index:5;
+  width:36px;
+  height:36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(10,10,12,.14);
+  border-radius:50%;
+  background:#FFFFFF;
+  color:#0A0A0C;
+  cursor:pointer;
+  transition:background .2s ease;
+}
+#csPop .csp-close:hover{background:#FFD83D}
+#csPop .csp-close svg{width:16px;height:16px}
+
+html.csp-lock,
+html.csp-lock body{overflow:hidden !important}
+
+@media (max-width:560px){
+  #csPop{padding:0}
+  #csPop .csp-modal{
+    max-width:100%;
+    height:100%;
+    border-radius:0;
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  #csPop,#csPop .csp-modal{transition:none}
+}
+</style>

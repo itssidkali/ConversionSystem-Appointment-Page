@@ -1,0 +1,544 @@
+<!-- ============================================================
+     ConversionSystem™ — THE CONVERSION GAP
+     Visual landing-page treatment
+     Minimal / Cinematic / GHL Custom HTML Block
+     ============================================================ -->
+
+<section id="csGapVisual">
+  <div class="csgv-wrap">
+
+    <p class="csgv-kicker">THE CONVERSION GAP</p>
+
+    <h2 class="csgv-title">
+      <span>Traffic Gets Them Here.</span>
+      <strong>Confidence Gets Them Buying.</strong>
+    </h2>
+
+    <div class="csgv-visual" aria-label="Conversion journey">
+
+      <div class="csgv-side csgv-left">
+        <small>THE CUSTOMER</small>
+        <b>WANTS IT</b>
+        <span>Discovers your brand.<br>Explores the product.</span>
+      </div>
+
+      <div class="csgv-center">
+
+        <div class="csgv-track">
+          <span class="csgv-track-line"></span>
+          <span class="csgv-node node-1"></span>
+          <span class="csgv-node node-2"></span>
+          <span class="csgv-node node-3"></span>
+        </div>
+
+        <div class="csgv-gap">
+          <span class="csgv-gap-label">THE GAP</span>
+          <strong>CONFIDENCE<br>BREAKS.</strong>
+        </div>
+
+        <div class="csgv-bridge">
+          <span>TRUST</span>
+          <i></i>
+          <span>CLARITY</span>
+          <i></i>
+          <span>CONFIDENCE</span>
+        </div>
+
+      </div>
+
+      <div class="csgv-side csgv-right">
+        <small>THE CUSTOMER</small>
+        <b>BUYS</b>
+        <span>The decision feels<br>obvious enough to act.</span>
+      </div>
+
+    </div>
+
+    <p class="csgv-close">
+      ConversionSystem™ is built to close the moment between
+      <em>wanting to buy</em> and <em>actually buying.</em>
+    </p>
+
+  </div>
+</section>
+
+<script>
+(function(){
+  var sec = document.getElementById('csGapVisual');
+  if(!sec) return;
+
+  function reveal(){
+    sec.classList.remove('is-in');
+    void sec.offsetWidth;
+    sec.classList.add('is-in');
+  }
+
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(entries, obs){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          reveal();
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.16}).observe(sec);
+  }else{
+    reveal();
+  }
+})();
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap');
+
+#csGapVisual{
+  --ink:#09090A;
+  --paper:#F7F4EF;
+  --white:#FFFFFF;
+  --red:#D12A20;
+  --red-soft:rgba(209,42,32,.10);
+  --muted:rgba(247,244,239,.50);
+  --dim:rgba(247,244,239,.28);
+  --line:rgba(247,244,239,.13);
+  --yellow:#FFD83D;
+  --ease:cubic-bezier(.16,1,.3,1);
+
+  width:100vw;
+  max-width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+
+  background:var(--ink);
+  color:var(--paper);
+
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  text-align:center;
+
+  padding:clamp(52px,7vh,76px) clamp(20px,5vw,64px);
+}
+
+#csGapVisual *,
+#csGapVisual *::before,
+#csGapVisual *::after{
+  box-sizing:border-box;
+}
+
+#csGapVisual .csgv-wrap{
+  width:100%;
+  max-width:1120px;
+  margin:0 auto;
+}
+
+/* HEADER */
+#csGapVisual .csgv-kicker{
+  margin:0 0 14px;
+
+  font-size:8px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:rgba(247,244,239,.38);
+
+  opacity:0;
+  transform:translateY(10px);
+  transition:opacity .55s ease .04s,transform .7s var(--ease) .04s;
+}
+
+#csGapVisual.is-in .csgv-kicker{
+  opacity:1;
+  transform:none;
+}
+
+#csGapVisual .csgv-title{
+  width:100%;
+  max-width:860px;
+  margin:0 auto;
+
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+
+  font-family:'Archivo',sans-serif;
+  letter-spacing:-.055em;
+  line-height:.96;
+}
+
+#csGapVisual .csgv-title span{
+  font-size:clamp(23px,2.7vw,35px);
+  font-weight:500;
+  color:rgba(247,244,239,.78);
+
+  opacity:0;
+  transform:translateY(18px);
+  transition:opacity .65s ease .10s,transform .8s var(--ease) .10s;
+}
+
+#csGapVisual .csgv-title strong{
+  font-size:clamp(37px,4.9vw,62px);
+  font-weight:900;
+  color:var(--paper);
+
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity .72s ease .18s,transform .85s var(--ease) .18s;
+}
+
+#csGapVisual.is-in .csgv-title span,
+#csGapVisual.is-in .csgv-title strong{
+  opacity:1;
+  transform:none;
+}
+
+/* VISUAL */
+#csGapVisual .csgv-visual{
+  margin:clamp(34px,5vh,48px) auto 0;
+
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(340px,1.3fr) minmax(0,1fr);
+  gap:clamp(22px,4vw,54px);
+
+  align-items:center;
+}
+
+#csGapVisual .csgv-side{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  min-height:155px;
+  position:relative;
+}
+
+#csGapVisual .csgv-side small{
+  margin-bottom:10px;
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.20em;
+  text-transform:uppercase;
+  color:var(--dim);
+}
+
+#csGapVisual .csgv-side b{
+  font-family:'Archivo',sans-serif;
+  font-size:clamp(30px,3.8vw,48px);
+  line-height:.9;
+  font-weight:900;
+  letter-spacing:-.065em;
+
+  color:var(--paper);
+}
+
+#csGapVisual .csgv-left b{
+  color:rgba(247,244,239,.90);
+}
+
+#csGapVisual .csgv-right b{
+  color:var(--yellow);
+}
+
+#csGapVisual .csgv-side span{
+  margin-top:10px;
+  max-width:190px;
+
+  font-size:10.5px;
+  line-height:1.5;
+  color:var(--muted);
+}
+
+/* CENTER PATH */
+#csGapVisual .csgv-center{
+  position:relative;
+  min-height:205px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+#csGapVisual .csgv-track{
+  position:absolute;
+  left:8%;
+  right:8%;
+  top:54px;
+  height:2px;
+}
+
+
+
+#csGapVisual .csgv-track{
+  display:none;
+}
+#csGapVisual .csgv-track-line,
+#csGapVisual .csgv-node{
+  display:none !important;
+}
+
+/* GAP */
+#csGapVisual .csgv-gap{
+  position:relative;
+  z-index:2;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  min-width:0;
+  width:max-content;
+  max-width:calc(100% - 28px);
+  min-height:0;
+  padding:18px 21px;
+
+  background:transparent;
+  border:1.5px dashed rgba(209,42,32,.78);
+  border-radius:10px;
+
+  opacity:0;
+  transform:translateY(14px) scale(.98);
+
+  transition:opacity .7s ease .52s,transform .8s var(--ease) .52s;
+}
+
+#csGapVisual.is-in .csgv-gap{
+  opacity:1;
+  transform:none;
+}
+
+
+
+#csGapVisual .csgv-gap-label{
+  margin-bottom:9px;
+
+  font-size:7px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:.22em;
+  color:var(--red);
+}
+
+#csGapVisual .csgv-gap strong{
+  font-family:'Archivo',sans-serif;
+  font-size:clamp(29px,3.3vw,44px);
+  line-height:.87;
+  font-weight:900;
+  letter-spacing:-.06em;
+  color:var(--paper);
+}
+
+/* BRIDGE */
+#csGapVisual .csgv-bridge{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:11px;
+
+  margin-top:34px;
+
+  opacity:0;
+  transform:translateY(12px);
+  transition:opacity .65s ease .78s,transform .75s var(--ease) .78s;
+}
+
+#csGapVisual.is-in .csgv-bridge{
+  opacity:1;
+  transform:none;
+}
+
+#csGapVisual .csgv-bridge span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  min-width:76px;
+  min-height:29px;
+  padding:6px 10px;
+
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:999px;
+
+  font-size:8px;
+  line-height:1;
+  font-weight:700;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+
+  color:var(--paper);
+  background:rgba(255,255,255,.02);
+}
+
+#csGapVisual .csgv-bridge span:nth-of-type(2){
+  border-color:rgba(255,216,61,.26);
+  color:var(--yellow);
+}
+
+#csGapVisual .csgv-bridge i{
+  width:9px;
+  height:1px;
+  background:rgba(247,244,239,.18);
+}
+
+/* CLOSING */
+#csGapVisual .csgv-close{
+  max-width:760px;
+  margin:clamp(33px,4vh,44px) auto 0;
+
+  font-family:'Archivo',sans-serif;
+  font-size:clamp(19px,2.1vw,27px);
+  line-height:1.16;
+  font-weight:600;
+  letter-spacing:-.028em;
+  color:rgba(247,244,239,.82);
+
+  opacity:0;
+  transform:translateY(13px);
+  transition:opacity .7s ease 1.02s,transform .8s var(--ease) 1.02s;
+}
+
+#csGapVisual.is-in .csgv-close{
+  opacity:1;
+  transform:none;
+}
+
+#csGapVisual .csgv-close em{
+  color:var(--red);
+  font-style:normal;
+  font-weight:800;
+}
+
+/* TABLET */
+@media (max-width:900px){
+  #csGapVisual{
+    padding:48px 18px 50px;
+  }
+
+  #csGapVisual .csgv-visual{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  #csGapVisual .csgv-side{
+    min-height:0;
+  }
+
+  #csGapVisual .csgv-center{
+    min-height:190px;
+    order:2;
+  }
+
+  #csGapVisual .csgv-left{order:1}
+  #csGapVisual .csgv-right{order:3}
+
+  #csGapVisual .csgv-left span,
+  #csGapVisual .csgv-right span{
+    max-width:250px;
+  }
+
+  #csGapVisual .csgv-track{
+    left:12%;
+    right:12%;
+  }
+
+  #csGapVisual .csgv-gap{
+    min-width:210px;
+  }
+}
+
+/* MOBILE */
+@media (max-width:560px){
+  #csGapVisual{
+    padding:40px 16px 42px;
+  }
+
+  #csGapVisual .csgv-kicker{
+    font-size:7px;
+    margin-bottom:12px;
+  }
+
+  #csGapVisual .csgv-title span{
+    font-size:22px;
+  }
+
+  #csGapVisual .csgv-title strong{
+    font-size:34px;
+    line-height:.94;
+  }
+
+  #csGapVisual .csgv-visual{
+    margin-top:29px;
+    gap:16px;
+  }
+
+  #csGapVisual .csgv-side b{
+    font-size:31px;
+  }
+
+  #csGapVisual .csgv-side span{
+    font-size:10px;
+  }
+
+  #csGapVisual .csgv-center{
+    min-height:185px;
+  }
+
+  #csGapVisual .csgv-track{
+    left:8%;
+    right:8%;
+    top:48px;
+  }
+
+  #csGapVisual .csgv-gap{
+    min-width:0;
+    width:max-content;
+    max-width:calc(100% - 24px);
+    min-height:0;
+    padding:16px 18px;
+  }
+
+  #csGapVisual .csgv-gap strong{
+    font-size:30px;
+  }
+
+  #csGapVisual .csgv-bridge{
+    gap:7px;
+    margin-top:29px;
+  }
+
+  #csGapVisual .csgv-bridge span{
+    min-width:66px;
+    min-height:27px;
+    padding:6px 7px;
+    font-size:7px;
+  }
+
+  #csGapVisual .csgv-bridge i{
+    width:5px;
+  }
+
+  #csGapVisual .csgv-close{
+    margin-top:27px;
+    font-size:18px;
+  }
+}
+
+/* REDUCED MOTION */
+@media (prefers-reduced-motion:reduce){
+  #csGapVisual .csgv-kicker,
+  #csGapVisual .csgv-title span,
+  #csGapVisual .csgv-title strong,
+  #csGapVisual .csgv-gap,
+  #csGapVisual .csgv-bridge,
+  #csGapVisual .csgv-close{
+    opacity:1!important;
+    transform:none!important;
+    transition:none!important;
+  }
+
+}
+</style>

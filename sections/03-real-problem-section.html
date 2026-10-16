@@ -1,0 +1,898 @@
+<section id="csRealProblemRef">
+  <div class="crf-wrap">
+
+    <div class="crf-kicker">HERE'S THE PART NOBODY TALKS ABOUT</div>
+
+    <h2 class="crf-title">
+      <span>Your Website</span>
+      <strong>ISN'T THE PROBLEM.</strong>
+      <em>It's What Happens After People Land On It.</em>
+    </h2>
+
+    <p class="crf-sub">
+      Most jewellery brands keep buying more traffic... while silently losing the customers who were already ready to buy.
+    </p>
+
+    <div class="crf-list">
+
+      <button class="crf-row" type="button">
+        <span class="crf-x">×</span>
+        <span class="crf-copy">
+          <b>Visitors</b> <strong>leave.</strong>
+        </span>
+        <span class="crf-dot"></span>
+      </button>
+
+      <button class="crf-row" type="button">
+        <span class="crf-x">×</span>
+        <span class="crf-copy">
+          <b>Add To Cart</b> <strong>no purchase.</strong>
+        </span>
+        <span class="crf-dot"></span>
+      </button>
+
+      <button class="crf-row" type="button">
+        <span class="crf-x">×</span>
+        <span class="crf-copy">
+          <b>Ads Don't Fix</b> <strong>broken stores.</strong>
+        </span>
+        <span class="crf-dot"></span>
+      </button>
+
+      <button class="crf-row" type="button">
+        <span class="crf-x">×</span>
+        <span class="crf-copy">
+          <b>Without Trust</b> <strong>price wins.</strong>
+        </span>
+        <span class="crf-dot"></span>
+      </button>
+
+    </div>
+
+    <div class="crf-takeaway">
+      <span>MORE TRAFFIC DOESN'T SOLVE</span>
+      <strong>A CONVERSION PROBLEM.</strong>
+    </div>
+
+    <div class="crf-cta">
+      <a
+        class="crf-btn"
+        href="https://api.leadconnectorhq.com/widget/form/349k6XqxJsWlr88axN4V"
+      >
+        <span>Create My Conversion System</span>
+      </a>
+
+      <p class="crf-fine">
+        See What's Costing You Sales <i>•</i> Know Exactly Why <i>•</i> Leave With A Clear Strategy Built For Jewellery Brands
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+(function () {
+  var root = document.getElementById('csRealProblemRef');
+  if (!root) return;
+
+  var rows = Array.prototype.slice.call(root.querySelectorAll('.crf-row'));
+  var button = root.querySelector('.crf-btn');
+  var cycleTimer;
+
+  function reveal() {
+    root.classList.add('crf-live');
+
+    rows.forEach(function (row, index) {
+      setTimeout(function () {
+        row.classList.add('crf-pulse');
+        setTimeout(function () {
+          row.classList.remove('crf-pulse');
+        }, 650);
+      }, 520 + index * 190);
+    });
+  }
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          reveal();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    observer.observe(root);
+  } else {
+    reveal();
+  }
+
+  setTimeout(reveal, 80);
+
+  /* Yellow highlight reveal */
+  function revealYellowHighlight() {
+    var highlight = root.querySelector('.crf-title strong');
+    if (!highlight) return;
+
+    highlight.classList.remove('highlight-reveal');
+    void highlight.offsetWidth;
+    highlight.classList.add('highlight-reveal');
+  }
+
+  setTimeout(revealYellowHighlight, 420);
+
+  rows.forEach(function (row) {
+    row.addEventListener('mouseenter', function () {
+      rows.forEach(function (other) {
+        if (other !== row) other.classList.add('crf-soft');
+      });
+      row.classList.add('crf-pulse');
+    });
+
+    row.addEventListener('mouseleave', function () {
+      rows.forEach(function (other) {
+        other.classList.remove('crf-soft', 'crf-pulse');
+      });
+    });
+
+    row.addEventListener('focus', function () {
+      rows.forEach(function (other) {
+        if (other !== row) other.classList.add('crf-soft');
+      });
+      row.classList.add('crf-pulse');
+    });
+
+    row.addEventListener('blur', function () {
+      rows.forEach(function (other) {
+        other.classList.remove('crf-soft', 'crf-pulse');
+      });
+    });
+  });
+
+  /*
+    CONVERSIONSYSTEM TRUE JS LOOP CTA™
+    Real requestAnimationFrame motion:
+    fast side-to-side shake + tilt + lift + scale punch + micro rebound.
+  */
+  if (button) {
+    var rafId = null;
+    var loopStarted = false;
+    var burstStart = 0;
+    var nextBurst = performance.now() + 650;
+    var hovering = false;
+
+    function renderCTA(now) {
+      if (document.hidden || !root.classList.contains('crf-live')) {
+        button.style.transform = '';
+        rafId = null;
+        loopStarted = false;
+        return;
+      }
+
+      if (now >= nextBurst) {
+        burstStart = now;
+        nextBurst = now + 2050;
+      }
+
+      var elapsed = now - burstStart;
+      var duration = 720;
+
+      if (elapsed >= 0 && elapsed < duration) {
+        var p = elapsed / duration;
+        var envelope = Math.sin(Math.PI * p);
+
+        /* High-frequency movement gives the CTA a real "look here" hit. */
+        var shake = Math.sin(p * Math.PI * 20.5);
+        var shake2 = Math.sin(p * Math.PI * 10.66 + 0.8);
+
+        var x = (shake * 5.5 + shake2 * 1.6) * envelope;
+        var y = (
+          -2.8 * Math.sin(Math.PI * p)
+          - 1.1 * Math.sin(Math.PI * p * 2.0)
+        ) * envelope;
+
+        var rotate = (shake * 2.1) * envelope;
+        var scale =
+          1
+          + (0.046 * envelope)
+          + (0.012 * Math.max(0, shake));
+
+        button.style.transform =
+          'translate3d(' + x.toFixed(2) + 'px,' +
+          y.toFixed(2) + 'px,0) rotate(' +
+          rotate.toFixed(2) + 'deg) scale(' +
+          scale.toFixed(4) + ')';
+
+        button.style.backgroundColor =
+          envelope > 0.7 ? '#FFE45C' : '#FFD83D';
+      } else {
+        button.style.transform = hovering
+          ? 'translate3d(0,-2px,0) scale(1.012)'
+          : 'translate3d(0,0,0) scale(1)';
+
+        button.style.backgroundColor =
+          hovering ? '#FFDE57' : '#FFD83D';
+      }
+
+      rafId = requestAnimationFrame(renderCTA);
+    }
+
+    function startCTAAnimation() {
+      if (loopStarted || document.hidden) return;
+
+      loopStarted = true;
+      burstStart = performance.now() + 180;
+      nextBurst = performance.now() + 650;
+
+      rafId = requestAnimationFrame(renderCTA);
+    }
+
+    function stopCTAAnimation() {
+      loopStarted = false;
+
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+
+      button.style.transform = '';
+      button.style.backgroundColor = '';
+    }
+
+    button.addEventListener('mouseenter', function () {
+      hovering = true;
+    });
+
+    button.addEventListener('mouseleave', function () {
+      hovering = false;
+    });
+
+    button.addEventListener('focus', function () {
+      hovering = true;
+    });
+
+    button.addEventListener('blur', function () {
+      hovering = false;
+    });
+
+    /* Reliable start inside page builders such as GHL. */
+    setTimeout(startCTAAnimation, 120);
+    setTimeout(startCTAAnimation, 500);
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        stopCTAAnimation();
+      } else {
+        startCTAAnimation();
+      }
+    });
+  }
+})();
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,700&display=swap');
+
+#csRealProblemRef{
+  --black:#0A0A0C;
+  --paper:#F6F3EF;
+  --red:#B3160F;
+  --red-hot:#D12A20;
+  --gold:#C9960A;
+  --yellow:#FFD83D;
+  --muted:#606060;
+  --line:#E3E3E3;
+  --soft-red:#FDF1EF;
+  --ease:cubic-bezier(.16,1,.3,1);
+
+  width:100vw;
+  max-width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+
+  background:#FFFFFF;
+  color:var(--black);
+
+  font-family:'Inter',Arial,sans-serif;
+  text-align:center;
+
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+
+  padding:62px 18px 50px;
+}
+
+#csRealProblemRef *,
+#csRealProblemRef *::before,
+#csRealProblemRef *::after{
+  box-sizing:border-box;
+}
+
+#csRealProblemRef .crf-wrap{
+  width:100%;
+  max-width:620px;
+  margin:0 auto;
+}
+
+/* Kicker */
+#csRealProblemRef .crf-kicker{
+  margin:0 0 17px;
+
+  font-size:8px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:.27em;
+  color:#5B6673;
+
+  opacity:0;
+  transform:translateY(8px);
+  transition:opacity .55s ease,transform .7s var(--ease);
+}
+
+#csRealProblemRef.crf-live .crf-kicker{
+  opacity:1;
+  transform:none;
+}
+
+/* Headline */
+#csRealProblemRef .crf-title{
+  margin:0;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  line-height:.95;
+  letter-spacing:-.065em;
+}
+
+#csRealProblemRef .crf-title span{
+  font-size:clamp(25px,4vw,35px);
+  font-weight:500;
+  color:#161616;
+
+  opacity:0;
+  transform:translateY(13px);
+  transition:opacity .6s ease .07s,transform .72s var(--ease) .07s;
+}
+
+#csRealProblemRef .crf-title strong{
+  position:relative;
+  isolation:isolate;
+  display:inline-block;
+  margin-top:4px;
+  padding:4px 10px 6px;
+
+  font-size:clamp(35px,5.7vw,52px);
+  line-height:.92;
+  font-weight:800;
+  letter-spacing:-.07em;
+
+  color:#070707;
+  background:transparent;
+
+  opacity:0;
+  transform:translateY(15px);
+  transition:opacity .66s ease .13s,transform .77s var(--ease) .13s;
+}
+
+#csRealProblemRef .crf-title strong::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+
+  background:var(--yellow);
+  border-radius:3px;
+
+  transform:scaleX(0);
+  transform-origin:left center;
+
+  opacity:0;
+}
+
+#csRealProblemRef.crf-live .crf-title strong.highlight-reveal::before{
+  animation:crfYellowReveal .72s cubic-bezier(.16,1,.3,1) .08s both;
+}
+
+@keyframes crfYellowReveal{
+  0%{
+    transform:scaleX(0);
+    opacity:.25;
+  }
+  55%{
+    transform:scaleX(1.035);
+    opacity:1;
+  }
+  78%{
+    transform:scaleX(.985);
+    opacity:1;
+  }
+  100%{
+    transform:scaleX(1);
+    opacity:1;
+  }
+}
+
+#csRealProblemRef .crf-title em{
+  max-width:560px;
+  margin-top:14px;
+
+  font-family:'Inter',Arial,sans-serif;
+  font-size:clamp(20px,3.2vw,29px);
+  font-style:normal;
+  font-weight:500;
+  line-height:1.05;
+  letter-spacing:-.045em;
+  color:#202020;
+
+  opacity:0;
+  transform:translateY(13px);
+  transition:opacity .66s ease .2s,transform .76s var(--ease) .2s;
+}
+
+#csRealProblemRef.crf-live .crf-title span,
+#csRealProblemRef.crf-live .crf-title strong,
+#csRealProblemRef.crf-live .crf-title em{
+  opacity:1;
+  transform:none;
+}
+
+#csRealProblemRef .crf-sub{
+  max-width:545px;
+  margin:18px auto 0;
+
+  font-size:12px;
+  line-height:1.58;
+  color:var(--muted);
+
+  opacity:0;
+  transform:translateY(9px);
+  transition:opacity .62s ease .28s,transform .7s var(--ease) .28s;
+}
+
+#csRealProblemRef.crf-live .crf-sub{
+  opacity:1;
+  transform:none;
+}
+
+/* List */
+#csRealProblemRef .crf-list{
+  width:100%;
+  margin:27px auto 0;
+
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+#csRealProblemRef .crf-row{
+  width:100%;
+  min-height:45px;
+
+  appearance:none;
+  -webkit-appearance:none;
+
+  display:grid;
+  grid-template-columns:23px minmax(0,1fr) 8px;
+  align-items:center;
+  gap:8px;
+
+  padding:8px 12px;
+
+  border:1px solid var(--line);
+  border-radius:7px;
+
+  background:#FFFFFF;
+  color:var(--black);
+
+  text-align:left;
+  cursor:pointer;
+
+  opacity:0;
+  transform:translateY(10px);
+
+  transition:
+    opacity .55s ease,
+    transform .65s var(--ease),
+    border-color .22s ease,
+    background .22s ease,
+    box-shadow .22s ease,
+    filter .22s ease;
+}
+
+#csRealProblemRef.crf-live .crf-row{
+  opacity:1;
+  transform:none;
+}
+
+#csRealProblemRef.crf-live .crf-row:nth-child(1){transition-delay:.38s;}
+#csRealProblemRef.crf-live .crf-row:nth-child(2){transition-delay:.46s;}
+#csRealProblemRef.crf-live .crf-row:nth-child(3){transition-delay:.54s;}
+#csRealProblemRef.crf-live .crf-row:nth-child(4){transition-delay:.62s;}
+
+#csRealProblemRef .crf-x{
+  width:18px;
+  height:18px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:4px;
+
+  background:#FFE5E2;
+  color:#FF4A3D;
+
+  font-size:14px;
+  line-height:1;
+  font-weight:500;
+
+  transition:transform .22s var(--ease),background .22s ease;
+}
+
+#csRealProblemRef .crf-copy{
+  font-size:11.5px;
+  line-height:1.1;
+  color:#202020;
+}
+
+#csRealProblemRef .crf-copy b{
+  font-weight:500;
+}
+
+#csRealProblemRef .crf-copy strong{
+  font-weight:700;
+  color:var(--red);
+}
+
+#csRealProblemRef .crf-dot{
+  width:6px;
+  height:6px;
+  justify-self:end;
+
+  border-radius:50%;
+  background:rgba(179,22,15,.22);
+
+  transition:background .2s ease,transform .2s ease;
+}
+
+#csRealProblemRef .crf-row:hover,
+#csRealProblemRef .crf-row:focus-visible{
+  outline:none;
+
+  border-color:rgba(179,22,15,.32);
+  background:#FFFCFB;
+
+  box-shadow:0 7px 18px rgba(179,22,15,.06);
+}
+
+#csRealProblemRef .crf-row:focus-visible{
+  box-shadow:
+    0 0 0 2px rgba(201,150,10,.22),
+    0 7px 18px rgba(179,22,15,.06);
+}
+
+#csRealProblemRef .crf-row.crf-soft{
+  opacity:.42 !important;
+}
+
+#csRealProblemRef .crf-row.crf-pulse{
+  border-color:rgba(179,22,15,.46);
+  background:#FFF9F8;
+}
+
+#csRealProblemRef .crf-row.crf-pulse .crf-x{
+  transform:scale(1.08);
+  background:#FFDCD8;
+}
+
+#csRealProblemRef .crf-row.crf-pulse .crf-dot{
+  background:var(--red);
+  transform:scale(1.35);
+}
+
+/* Bottom conclusion */
+#csRealProblemRef .crf-takeaway{
+  margin:28px 0 0;
+  padding:17px 18px;
+
+  border:1px dashed rgba(179,22,15,.34);
+  border-radius:8px;
+
+  background:var(--soft-red);
+
+  color:var(--red);
+
+  opacity:0;
+  transform:translateY(10px);
+  transition:opacity .65s ease .68s,transform .75s var(--ease) .68s;
+}
+
+#csRealProblemRef.crf-live .crf-takeaway{
+  opacity:1;
+  transform:none;
+}
+
+#csRealProblemRef .crf-takeaway span{
+  display:block;
+
+  font-size:13px;
+  line-height:1.1;
+  font-weight:600;
+  letter-spacing:.02em;
+}
+
+#csRealProblemRef .crf-takeaway strong{
+  display:block;
+  margin-top:3px;
+
+  font-size:clamp(21px,3.25vw,29px);
+  line-height:1;
+  font-weight:800;
+  letter-spacing:-.055em;
+  color:#0D0D0D;
+}
+
+/* CTA */
+#csRealProblemRef .crf-cta{
+  margin:19px auto 0;
+
+  opacity:0;
+  transform:translateY(10px);
+  transition:opacity .68s ease .77s,transform .75s var(--ease) .77s;
+}
+
+#csRealProblemRef.crf-live .crf-cta{
+  opacity:1;
+  transform:none;
+}
+
+#csRealProblemRef .crf-btn,
+#csRealProblemRef .crf-btn:hover,
+#csRealProblemRef .crf-btn:focus,
+#csRealProblemRef .crf-btn:visited{
+  text-decoration:none !important;
+}
+
+#csRealProblemRef .crf-btn{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  width:100%;
+  max-width:470px;
+  min-height:60px;
+  padding:16px 30px;
+
+  border:1px solid #D5B51B;
+  border-radius:13px;
+
+  background:#FFD83D;
+  color:#080808;
+
+  font-size:15px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:.045em;
+  text-transform:uppercase;
+
+  box-shadow:none;
+  outline:none;
+  will-change:transform;
+
+  transition:
+    background-color .12s ease,
+    border-color .12s ease;
+}
+
+#csRealProblemRef .crf-btn span{
+  position:relative;
+  z-index:2;
+}
+
+#csRealProblemRef .crf-btn:hover{
+  background:#FFDE57;
+  border-color:#B99A09;
+}
+
+#csRealProblemRef .crf-fine{
+  max-width:570px;
+  margin:8px auto 0;
+
+  font-size:8.8px;
+  line-height:1.5;
+  color:#7A7A7A;
+}
+
+#csRealProblemRef .crf-fine i{
+  margin:0 4px;
+  font-style:normal;
+  color:var(--red);
+}
+
+/* TABLET */
+@media (max-width:900px){
+  #csRealProblemRef{
+    padding:58px 18px 48px;
+  }
+
+  #csRealProblemRef .crf-wrap{
+    max-width:620px;
+  }
+}
+
+/* MOBILE */
+@media (max-width:720px){
+  #csRealProblemRef{
+    padding:43px 15px 38px;
+  }
+
+  #csRealProblemRef .crf-kicker{
+    margin-bottom:14px;
+    font-size:7px;
+  }
+
+  #csRealProblemRef .crf-title span{
+    font-size:22px;
+  }
+
+  #csRealProblemRef .crf-title strong{
+    max-width:330px;
+    font-size:clamp(32px,9.9vw,43px);
+    padding:4px 8px 5px;
+  }
+
+  #csRealProblemRef .crf-title strong::before{
+    border-radius:2px;
+  }
+
+  #csRealProblemRef .crf-title em{
+    max-width:340px;
+    margin-top:11px;
+    font-size:clamp(20px,6.2vw,27px);
+  }
+
+  #csRealProblemRef .crf-sub{
+    max-width:320px;
+    margin-top:14px;
+    font-size:10.7px;
+    line-height:1.5;
+  }
+
+  #csRealProblemRef .crf-list{
+    margin-top:23px;
+    gap:5px;
+  }
+
+  #csRealProblemRef .crf-row{
+    min-height:43px;
+    padding:8px 10px;
+    grid-template-columns:22px minmax(0,1fr) 7px;
+    gap:7px;
+    border-radius:6px;
+  }
+
+  #csRealProblemRef .crf-copy{
+    font-size:10.5px;
+  }
+
+  #csRealProblemRef .crf-x{
+    width:17px;
+    height:17px;
+    font-size:13px;
+  }
+
+  #csRealProblemRef .crf-takeaway{
+    margin-top:22px;
+    padding:15px 13px;
+    border-radius:7px;
+  }
+
+  #csRealProblemRef .crf-takeaway span{
+    font-size:11px;
+  }
+
+  #csRealProblemRef .crf-takeaway strong{
+    font-size:21px;
+  }
+
+  #csRealProblemRef .crf-cta{
+    margin-top:15px;
+  }
+
+  #csRealProblemRef .crf-btn{
+    max-width:100%;
+    min-height:56px;
+    padding:15px 20px;
+    border-radius:12px;
+    font-size:13.5px;
+  }
+
+  #csRealProblemRef .crf-fine{
+    max-width:315px;
+    font-size:8.4px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width:420px){
+  #csRealProblemRef{
+    padding:38px 10px 34px;
+  }
+
+  #csRealProblemRef .crf-title span{
+    font-size:20px;
+  }
+
+  #csRealProblemRef .crf-title strong{
+    font-size:9.9vw;
+  }
+
+  #csRealProblemRef .crf-title em{
+    font-size:6.2vw;
+  }
+
+  #csRealProblemRef .crf-sub{
+    max-width:300px;
+    font-size:10.2px;
+  }
+
+  #csRealProblemRef .crf-row{
+    min-height:41px;
+    padding:7px 9px;
+  }
+
+  #csRealProblemRef .crf-copy{
+    font-size:10px;
+  }
+
+  #csRealProblemRef .crf-takeaway{
+    padding:14px 11px;
+  }
+
+  #csRealProblemRef .crf-takeaway span{
+    font-size:10.2px;
+  }
+
+  #csRealProblemRef .crf-takeaway strong{
+    font-size:19px;
+  }
+
+  #csRealProblemRef .crf-fine{
+    font-size:8.1px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion:reduce){
+  #csRealProblemRef .crf-kicker,
+  #csRealProblemRef .crf-title span,
+  #csRealProblemRef .crf-title strong,
+  #csRealProblemRef .crf-title em,
+  #csRealProblemRef .crf-sub,
+  #csRealProblemRef .crf-row,
+  #csRealProblemRef .crf-takeaway,
+  #csRealProblemRef .crf-cta{
+    opacity:1 !important;
+    transform:none !important;
+    transition:none !important;
+  }
+
+  #csRealProblemRef .crf-btn{
+    transition:none !important;
+  }
+
+  #csRealProblemRef .crf-title strong::before{
+    animation:none !important;
+    transform:scaleX(1) !important;
+    opacity:1 !important;
+  }
+}
+</style>
